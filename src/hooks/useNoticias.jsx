@@ -2,8 +2,10 @@ import { useContext } from 'react'
 import { NoticiasContext } from '../context/NoticiasProvider'
 
 
-export const useNoticias = () => {
+const useNoticias = () => {
     return (
         useContext(NoticiasContext)
     )
 }
+
+export default useNoticias
