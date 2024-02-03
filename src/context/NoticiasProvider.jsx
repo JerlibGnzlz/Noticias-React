@@ -21,7 +21,8 @@ export const NoticiasProvider = ({ children }) => {
         const consultarAPI = async () => {
 
 
-            const URL = `https://newsapi.org/v2/top-headlines?country=ve&category=${categoria}&pageSize=100&apiKey=${import.meta.env.VITE_API_KEY}`
+            // const URL = `https://newsapi.org/v2/top-headlines?country=ve&category=${categoria}&pageSize=100&apiKey=${import.meta.env.VITE_API_KEY}`
+            const URL = ` https://newsapi.org/v2/everything?q=category=${categoria}&from=2024-02-02&to=2024-02-02&sortBy=popularity&apiKey=${import.meta.env.VITE_API_KEY}`
 
             const { data } = await axios(URL)
 

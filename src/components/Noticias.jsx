@@ -13,16 +13,21 @@ import useNoticias from "../hooks/useNoticias"
 
 const Noticias = () => {
 
-    const { noticias } = useNoticias()
+    const { noticias: news } = useNoticias()
 
-    const { url, urlToImage, author, title } = noticias
+    const { url, urlToImage, author, title, description } = news
 
-    console.log(noticias)
+    console.log(news)
 
     return (
         <>
-            {noticias.map(noticia => (
-                <p key={noticia.url}>{noticia.author}</p>
+            {news.map(noticia => (
+                <p key={noticia.url}>
+                    Author: {noticia.author} - <br></br>
+                    Recursos: {noticia.source.name}
+
+                </p>
+
             ))}
             <Card>
                 <CardMedia
