@@ -1,5 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material';
 import { Formulario } from "./components/Formulario";
+import { ListadoNoticias } from "./components/ListadoNoticias";
 import { NoticiasProvider } from './context/NoticiasProvider';
 
 
@@ -10,9 +11,9 @@ const App = () => {
       <Container>
         <header>
           <Typography
-            align='center'
-            component="h1"
-            variant='h3'
+            align={'center'}
+            component={"h1"}
+            variant={'h3'}
             sx={{
               m: 10,
               fontWeight: "bold"
@@ -31,6 +32,8 @@ const App = () => {
             <Formulario />
           </Grid>
         </Grid>
+
+        <ListadoNoticias />
       </Container>
     </NoticiasProvider>
   )

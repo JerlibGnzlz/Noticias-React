@@ -21,7 +21,7 @@ export const NoticiasProvider = ({ children }) => {
         const consultarAPI = async () => {
 
 
-            const URL = `https://newsapi.org/v2/top-headlines?country=ve&category=${categoria}&apiKey=${import.meta.env.VITE_API_KEY}`
+            const URL = `https://newsapi.org/v2/top-headlines?country=ve&category=${categoria}&pageSize=100&apiKey=${import.meta.env.VITE_API_KEY}`
 
             const { data } = await axios(URL)
 
@@ -35,7 +35,8 @@ export const NoticiasProvider = ({ children }) => {
         <NoticiasContext.Provider value={
             {
                 categoria,
-                handleChanceCategoria
+                handleChanceCategoria,
+                noticias
             }
         }>
 
