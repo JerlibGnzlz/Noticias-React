@@ -1,9 +1,11 @@
-import { Typography } from "@mui/material"
-import Noticias from "./Noticias"
+import { Typography, Grid } from "@mui/material";
+import useNoticias from "../hooks/useNoticias";
+import Noticias from "../components/Noticias";
 
 export const ListadoNoticias = () => {
 
-
+    const { noticias } = useNoticias();
+    console.log(noticias);
     return (
         <>
             <Typography
@@ -15,8 +17,16 @@ export const ListadoNoticias = () => {
             </Typography>
 
 
-            <Noticias />
+            <Grid>
+                {noticias.map(noticia => (
+                    <Noticias
+                        key={noticia.url}
+                        noticia={noticia} />
+
+                ))}
+
+            </Grid>
 
         </>
-    )
-}
+    );
+};
