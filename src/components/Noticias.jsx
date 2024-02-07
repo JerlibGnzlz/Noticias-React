@@ -10,8 +10,8 @@ import Grid from '@mui/material/Grid';
 const Noticias = ({ noticia }) => {
 
     const { author, url, title, description, source, urlToImage } = noticia;
-    console.log(noticia);
     return (
+
         <Grid item md={6} lg={4}>
             <Card>
                 {urlToImage && (
@@ -52,6 +52,8 @@ const Noticias = ({ noticia }) => {
                 </CardActions>
             </Card>
         </Grid>
+
+
     );
 };
 
