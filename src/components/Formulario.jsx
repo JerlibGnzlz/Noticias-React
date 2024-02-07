@@ -1,6 +1,6 @@
 
-import { FormControl, InputLabel, Select, MenuItem, Button } from "@mui/material"
-import useNoticias from "../hooks/useNoticias"
+import { FormControl, InputLabel, Select, MenuItem, Button } from "@mui/material";
+import useNoticias from "../hooks/useNoticias";
 
 
 
@@ -14,12 +14,12 @@ const CATEGORIAS = [
     { value: 'science', label: 'Ciencia' },
     { value: 'sports', label: 'Deportes' },
     { value: 'technology', label: 'Tecnología' },
-]
+];
 
 
 export const Formulario = () => {
 
-    const { categoria, handleChanceCategoria } = useNoticias()
+    const { categoria, handleChanceCategoria } = useNoticias();
 
     return (
         <form >
@@ -40,16 +40,9 @@ export const Formulario = () => {
                         </MenuItem>
                     ))}
                 </Select>
-
-                <Button
-                    fullWidth
-                    variant="contained"
-                    sx={{ mt: 1 }}
-                    color="success"
-                >Buscar Noticias</Button>
             </FormControl>
         </form >
 
 
-    )
-}
+    );
+};

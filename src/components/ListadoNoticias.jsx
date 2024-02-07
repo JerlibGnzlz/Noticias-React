@@ -17,7 +17,7 @@ export const ListadoNoticias = () => {
             </Typography>
 
 
-            <Grid>
+            <Grid container spacing={3}>
                 {noticias.map(noticia => (
                     <Noticias
                         key={noticia.url}
